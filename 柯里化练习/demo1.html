@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//实现一个函数f，满足f(a,b)=f(a)(b)=a+b
+		function add(a,b){
+			return a+b;
+		}
+		function createCurry(fun,args){
+			var arity = fun.length;
+			var args = args || [];
+			return function (){
+				var _args = [].slice.call(arguments);
+				[].push.apply(_args,args);
+				if(_args.length<arity){
+					return createCurry.call(this,fun,_args);
+				}
+				return fun.apply(this,_args);
+			}
+		}
+		var f = createCurry(add);
+		console.log(f(1,2));
+		console.log(f(1)(2))
+		console.log(1+2)
+		console.log(f(1,2)==f(1)(2))
+	</script>
+</body>
+</html>
