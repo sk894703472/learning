@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>deep</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function deepClone (initalobj) {
+			var obj = {};
+			obj = JSON.parse(JSON.stringify(initalobj));
+			return obj;
+		}
+		var obj = {a:{a:"hello",b:21},b:"sdd"};
+		var newobj = deepClone(obj);
+		newobj.a.a = "world";
+		console.log(newobj,obj);
+	</script>
+</body>
+</html>

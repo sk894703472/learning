@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>寄生式</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function object (o) {
+			function F () {}
+			F.prototype = o;
+			return new F();
+		}
+		function createAnother (original) {
+			var clone = object(original);
+			clone.sayHi = function () {
+				console.log("hi");
+			}
+			return clone;
+		}
+		var person = {
+			name:"skk",
+			friends:["lcy","ls"]
+		};
+		var anotherPerson = createAnother(person);
+		anotherPerson.sayHi();
+	</script>
+</body>
+</html>

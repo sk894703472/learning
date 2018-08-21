@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>simpleClone1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function simpleClone (initalobj) {
+			var obj = {};
+			for(var i in initalobj){
+				obj[i] = initalobj[i];
+			}
+			return obj;
+		}
+
+		var myobj = {
+			name: "sk",
+			age: 23,
+			gender: 2,
+			school: "xupt"
+		}
+		var newobj = simpleClone(myobj);
+		newobj.name = "skk";
+		console.log(newobj); //{name: "skk", age: 23, gender: 2, school: "xupt"}
+		console.log(myobj); //{name: "sk", age: 23, gender: 2, school: "xupt"}
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function deepClone (initalobj,finalObj) {
+			var obj = finalObj || {};
+			for(var i in initalobj){
+				var prop = initalobj[i];
+				if(prop === obj){
+					continue;
+				}
+				if(typeof prop === "object") {
+					obj[i] = (prop.constructor === Array)?prop:Object.create(prop);
+				}else{
+					obj[i] = prop;
+				}
+			}
+			return obj;
+		}
+		var obj = {a:{a:"hello",b:21},b:"sdd"};
+		var newobj = deepClone(obj);
+		newobj.a.a = "world";
+		console.log(newobj,obj);
+	</script>
+</body>
+</html>

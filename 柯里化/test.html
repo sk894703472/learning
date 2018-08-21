@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>柯里化</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function A(a,b,c){
+			return a+b+c;
+		}
+		function createCurry (func,args) {
+			var arity = func.length;
+			var args = args || [];
+			console.log(arity,args)
+			return function () {
+				var _args = [].slice.call(arguments);
+				console.log(_args);
+				[].push.apply(_args,args);
+				console.log(_args,arity)
+				if(_args.length < arity){
+					return createCurry.call(this,func,_args);
+				}
+				return func.apply(this,_args);
+			}
+		}
+		var _A = createCurry(A);
+		// console.log(_A(1,2,3));
+		console.log(_A(1,2)(3));
+		// console.log(_A(1)(2)(3));
+		// console.log(_A(1)(2,3));
+		// console.log(A(1,2,3))
+
+	</script>
+</body>
+</html>

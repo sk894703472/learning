@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>构造</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 普通
+		// function superType () {
+		// 	this.color = ['red','green','blue'];
+		// }
+		// function subType () {
+		// 	superType.call(this)
+		// }
+		// var superinstance = new superType();
+		// var subinstance = new subType();
+		// subinstance.color.push('pink');
+		// console.log(superinstance.color);
+		// console.log(subinstance.color)
+		// 传参
+		function superType (name) {
+			this.name = name;
+		}
+		function subType () {
+			superType.apply(this,["skk"]);
+			this.age = 20;
+		}
+		var superinstance = new superType();
+		var subinstance = new subType();
+		console.log(subinstance.name);
+		console.log(subinstance.age)
+	</script>
+</body>
+</html>

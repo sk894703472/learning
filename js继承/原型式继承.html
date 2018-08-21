@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>原型式</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function object (o) {
+			function F () {}
+			F.prototype = o;
+			return new F();
+		}
+		var person = {
+			name:"skk",
+			friends:["lcy","ls"]
+		};
+		var anotherPerson = Object.create(person,{
+			name:{value:"lcy"}
+		})
+		// var anotherPerson = object(person);
+		// anotherPerson.name = "lcy";
+		// anotherPerson.friends.push("zs");
+		// console.log(person)
+		console.log(anotherPerson)
+	</script>
+</body>
+</html>

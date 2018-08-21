@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>组合</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function superType (name) {
+			this.name = name;
+		}
+		superType.prototype.sayName = function () {
+			console.log(this.name)
+		}
+		function subType (name,age) {
+			superType.call(this,name);
+			this.age = age;
+		}
+		subType.prototype = new superType();
+		subType.prototype.sayAge = function () {
+			console.log(this.age);
+		}
+		var instance = new subType('skk',52);
+		instance.sayAge();
+		instance.sayName();
+	</script>
+</body>
+</html>
