@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>冒泡排序</title>
+</head>
+<body>
+<script type="text/javascript">
+	// function bubbleSort(arr){
+	//     var len = arr.length
+	//     console.time('耗时')
+	//     for(var i = 0;i < len;i++){
+	//         for(var j = 0;j < len-1-i;j++){
+	//             if(arr[j] > arr[j+1]){
+	//                 var temp = arr[j+1];
+	//                 arr[j+1] = arr[j];
+	//                 arr[j] = temp;
+	//             }
+	//         }
+	//     }
+	//     console.timeEnd('耗时')
+	//     return arr;
+	// }
+	// var arr=[3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+	// console.log(bubbleSort(arr));
+	// function bubbleSort(arr){
+	// 	var i = arr.length-1;
+	// 	console.time('耗时');
+	// 	while(i > 0){
+	// 		var pos = 0;
+	// 		for( var j = 0;j<i;j++){
+	// 			if(arr[j]>arr[j+1]){
+	// 				pos = j;
+	// 				var temp = arr[j+1];
+	// 				arr[j+1] = arr[j];
+	// 				arr[j] = temp
+	// 			}
+	// 		}
+	// 		i = pos;
+	// 	}
+	// 	console.timeEnd('耗时')
+	// 	return arr;
+	// }
+	// var arr=[3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+	// console.log(bubbleSort(arr));
+	// function bubbleSort(arr){
+	// 	var low = 0;
+	// 	var high = arr.length-1;
+	// 	var temp,j;
+	// 	console.time('耗时')
+	// 	while(low<high){
+	// 		for(j = low;j<high;++j){
+	// 			if(arr[j]>arr[j+1]){
+	// 				temp = arr[j];
+	// 				arr[j] = arr[j+1];
+	// 				arr[j+1] = temp;
+	// 			}
+	// 		}
+	// 		for(j = high;j>low;--j){
+	// 			if(arr[j]<arr[j-1]){
+	// 				temp = arr[j];
+	// 				arr[j] = arr[j-1];
+	// 				arr[j-1] = temp
+	// 			}
+	// 		}
+	// 		--high;
+	// 		++low;
+	// 	}
+	// 	console.timeEnd('耗时')
+	// 	return arr;
+	// }
+	// function bubbleSort(arr){
+	// 	var temp;
+	// 	var len = arr.length;
+	// 	for(var i = 0;i<len;i++){
+	// 		for(var j = 0;j<len-1-i;j++){
+	// 			if(arr[j]>arr[j+1]){
+	// 				temp = arr[j];
+	// 				arr[j] = arr[j+1];
+	// 				arr[j+1] = temp
+	// 			}
+	// 		}
+	// 	}
+	// 	return arr;
+	// }
+	// function bubbleSort(arr){
+	// 	var temp;
+	// 	var i = arr.length-1;
+	// 	while(i>0){
+	// 		var pos = 0;
+	// 		for(var j = 0;j<i;j++){
+	// 			if(arr[j]>arr[j+1]){
+	// 				pos = j;
+	// 				temp = arr[j];
+	// 				arr[j] = arr[j+1];
+	// 				arr[j+1] = temp
+	// 			}
+	// 		}
+	// 		i = pos;
+	// 	}
+	// 	return arr;
+	// }
+	// function bubbleSort(arr){
+	// 	var temp;
+	// 	var low = 0;
+	// 	var high = arr.length-1;
+	// 	while(low<high){
+	// 		for(var j = low;j<high;j++){
+	// 			if(arr[j]>arr[j+1]){
+	// 				temp = arr[j+1];
+	// 				arr[j+1] = arr[j];
+	// 				arr[j] = temp;
+	// 			}
+	// 		}
+	// 		for(var j = high;j>low;j--){
+	// 			if(arr[j-1]>arr[j]){
+	// 				temp = arr[j-1];
+	// 				arr[j-1] = arr[j];
+	// 				arr[j] = temp;
+	// 			}
+	// 		}
+	// 		high--;
+	// 		low++;
+	// 	}
+	// 	return arr;
+	// }
+	var arr=[3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+	console.log(bubbleSort(arr));
+</script>
+</body>
+</html>
