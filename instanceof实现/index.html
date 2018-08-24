@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sk</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function S(){
+			this.a = 'sk';
+		}
+		var sk = new S();
+		function _instanceof(A,B){
+			var o = B.prototype;
+			A = A.__proto__;
+			while(true){
+				if(!A){
+					return false;
+				}else if(A === o){
+					return true
+				}
+				A = A.__proto__;
+			}
+		}
+		console.log(_instanceof(sk,Array));
+	</script>
+</body>
+</html>
