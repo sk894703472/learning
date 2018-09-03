@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>polo36o-index</title>
+		<link rel="stylesheet" type="text/css" href="css/page-index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	</head>
+	<body>
+		<!--设置header开始-->
+		<div class="header w">
+			
+			<!--设置导航条-->
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="#">HOME</a>
+						<p>Back to home</p>
+					</li>
+					<li>
+						<a href="#">PRODUCTS</a>
+						<p>What we have for you</p>
+					</li>
+					<li>
+						<a href="#">SERVICES</a>
+						<p>Things we do</p>
+					</li>
+					<li>
+						<a href="#">BLOG</a>
+						<p>Follow our updates</p>
+					</li>
+					<li>
+						<a href="#">CONTACT</a>
+						<p>Ways to reach us</p>
+					</li>
+				</ul>
+			</div>
+			<!--logo-->
+			<div class="logo">
+				<a href="#">
+					<img src="img/logo.png" alt="logo"/>
+				</a>
+			</div>
+		</div>
+		<!--设置header结束-->
+		
+		<!--设置banner开始-->
+		
+		<div class="banner w">
+			<!--设置图片-->
+			<img id="pic1"  src="img/banner.png"/>
+			<!--设置切换图片按钮-->
+			<div class="pointerDiv">
+				<a href="img/banner1.jpg" onclick="changePic(this); return false;"onblur="changeButton(this);"></a>
+				<a href="img/banner.png" class="active" onclick="changePic(this); return false;"onblur="changeButton(this);"></a>
+				<a href="img/banner2.jpg" onclick="changePic(this); return false;"onblur="changeButton(this);"></a>
+				<a href="img/banner3.jpg" onclick="changePic(this); return false;"onblur="changeButton(this);"></a>
+				<a href="img/banner4.jpg" onclick="changePic(this); return false;"onblur="changeButton(this);"></a>
+				
+			</div>
+		</div>
+		
+		<!--设置banner结束-->
+		<!--设置concent开始-->
+		<div class="content w cleafix">
+			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
+			<div class="pl">
+				<h2>Perfect Logic</h2>
+				<h3>All you want your website to do.</h3>
+				<div class="pic"><img src="img/pic1.jpg"/></div>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				<a href="#">Learn More</a>
+			</div>
+			<div class="cs">
+				<h2>Complete Solution</h2>
+				<h3>A tool anything and everything you can think</h3>
+				<div class="pic"><img src="img/pic2.jpg"/></div>
+				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciun tdolore magnam aliquam quaerat voluptatem.</p>
+				<a href="#">Learn More</a>
+			</div>
+			<div class="uc">
+				<h2>Uber Cultures</h2>
+				<h3>Fresh. Modern and ready for future</h3>
+				<div class="pic"><img src="img/pic3.jpg"/></div>
+				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+				<a href="#">Learn More</a>
+			</div>
+		</div>
+		<!--设置concent结束-->
+		
+		<!--设置contact-->
+		<div class="contact w cleafix">
+			<!--左边contact-->
+			<div class="sc">
+				<h2>Social Connection</h2>
+				<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui </p>
+				<div class="icons">
+					<a href="#"><img src="img/ico1.png"/></a>
+					<a href="#"><img src="img/ico2.png"/></a>
+					<a href="#"><img src="img/ico3.png"/></a>
+					<a href="#"><img src="img/ico4.png"/></a>
+					<a href="#"><img src="img/ico5.png"/></a>
+				</div>
+				<h3>Newsletter</h3>
+				<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui </p>
+				<form action="#" >
+					<input class="txt smallM" type="text" placeholder="your email address"/>
+					<button>Subscribe</button>
+				</form>
+			</div>
+			<!--中间contact-->
+			<div class="co">
+				<h2>Contact</h2>
+				<form action="#">
+					<input class="txt largeM" type="text" placeholder="your name"/>
+					<input class="txt largeM"  type="text" placeholder="your email address"/>
+					<textarea class="tarea" placeholder="message"></textarea>
+					<button>Send it</button>
+				</form>
+			</div>
+			<!--右边contact-->
+			<div class="nu">
+				<h2>News Updates</h2>
+				<div class="imgtxt">					
+						<p class="cleafix">
+							<img src="img/nu1.gif"/>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						</p>
+				</div>
+				<div class="imgtxt">
+						<p class="cleafix">
+							<img src="img/nu2.gif"/>
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+						</p>
+				</div>
+				<div class="imgtxt">					
+						<p class="cleafix">
+							<img src="img/nu3.gif"/>
+							At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.
+						</p>
+						<button>Visit our Blog</button>
+				</div>
+			</div>
+		</div>
+		<!--设置contact-->
+		<!--设置footer开始-->
+		<div class="footer">
+			<div class="w cleafix">
+				<p class="fu largeM">Copyright 2010. Studio VIVROCKS. All Rights Reserved.</p>
+				<p class="largeM">Site Powered by Wordpress. Design and Developed by VIVROCKS.</p>
+				<p class="smallM"><a href="#">Home</a> | <a href="#">About</a> | <a href="#">Products</a> | <a href="#">Services</a> | <a href="#">Contact</a> </p>
+				<p class="smallM"><a href="#">Privacy Policy</a> | <a href="#">Terms of use</a></p>
+			</div>
+		</div>
+		
+		<script src="js/changePic.js"></script>
+		<!--设置footer结束-->
+		<!--解决ie6png透明问题-->
+		<!--[if IE 6]>
+		<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+		<script>
+			DD_belatedPNG.fix("img")
+		</script>
+		<![endif]-->
+	</body>
+</html>

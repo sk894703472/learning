@@ -1,0 +1,270 @@
+/*设置首页背景样式*/
+body{
+	background: url(../img/bg_1.png) repeat-x;
+}
+/*解决高度崩塌*/
+.cleafix:after,
+.cleafix:before{
+	content: "";
+	display: table;
+	clear: both;
+}
+.cleafix{
+	zoom: 1;
+}
+/*设置固定的宽度和居中*/
+.w{
+	width: 940px;
+	margin: 0 auto;
+}
+/*设置header样式*/
+.header{
+/*	background-color: #bfa;*/
+	/*设置一个上内边距*/
+	padding-top: 37px;
+	/*设置一个下内边距*/
+	padding-bottom: 46px;
+}
+.logo{
+	margin-left: 15px;
+
+}
+/*设置导航条样式*/
+.nav{
+	float: right;
+}
+.nav ul{
+	margin-top:22px ;
+}
+/*设置无序列表样式*/
+.nav li{
+	float: left;
+	/*设置左右内边距*/
+	padding: 0 10px 8px;
+	border-left: dotted 1px #d6d6d6;
+}
+/*设置导航项链接样式*/
+.nav a{
+	color:#666;
+	font:bold 14px Georgia ;
+	text-decoration: none;
+}
+/*设置超链接点击格式*/
+.nav a:hover{
+	color:#a4a2a2;
+	text-decoration: underline;
+}
+/*设置导航条p标签格式*/
+.nav p{
+	color: #b7b7b7;
+	font: 11px Tahoma ;
+}
+/*设置banner*/
+.banner{
+	/*设置高度*/
+	height: 356px;
+	/*设置banner背景图片*/
+	background:  url(../img/banner-bg.png) no-repeat bottom center;
+	/*开启相对定位*/
+	position: relative;
+}
+.pointerDiv{
+	/*为pointerDiv设置绝对定位*/
+	position: absolute;
+	top: 314px;
+	left: 15px;
+}
+/*设置图片切换按钮*/
+.pointerDiv a{
+	/*设置超链接浮动*/
+	float:left;
+	/*设置超链接大小*/
+	width: 17px;
+	height: 17px;
+	/*设置背景图片*/
+	background: url(../img/pointer.png) no-repeat;
+	/*设置左外边距*/
+	margin-left:7px ;
+}
+
+.pointerDiv .active,
+.pointerDiv a:hover{
+	background: url(../img/pointer-active.png) no-repeat;
+}
+/*设置内容*/
+.content h1{
+	font: bold 24px Georgia;
+	text-align: center;
+	padding: 10px 0 20px 0;
+	/*设置下外边距*/
+	margin-bottom:40px ;
+	/*背景图片*/
+	background: url(../img/line.png) no-repeat bottom center;
+}
+.content .pl,.content .cs,.content .uc,
+.contact .sc,.contact .co,.contact .nu{
+	/*设置浮动*/
+	float: left;
+	width: 300px;
+}
+.content h2{
+	color: #11719e;
+	font: 21px Georgia;
+}
+.content h3{
+	color: #8c8c8c;
+	font: 12px helvetica;
+}
+/*设置中间div左右外边距*/
+.content .cs,.contact .co{
+	margin: 0 20px ;
+}
+.content .pic{
+	width: 299px;
+	height: 190px;	
+	background: url(../img/pic-bg.png) no-repeat;
+	/*设置上下外边距*/
+	margin: 16px 0 10px 0;
+	text-align: center;
+	padding-top: 12px ;
+}
+.content p{
+	color: #3e3e3e;
+	font: 13px helvetica;
+	height: 86px;
+}
+.content a{
+	display: block;
+	width: 163px;
+	height: 40px;
+	text-decoration: none;
+	font: 12px helvetica;
+	color: #016999;
+	background: url(../img/button-bg.png) no-repeat;
+	text-indent: 1em;
+	line-height: 40px;
+	margin-bottom: 35px;
+}
+/*设置联系栏背景*/
+.contact{
+	background: url(../img/line.png) no-repeat top center;
+	margin-bottom: 23px;
+}
+/*设置联系栏布局*/
+.contact .sc,.contact .co,.contact .nu{
+	padding: 43px 0 9px;
+	height: 300px;
+	/*background-color: yellow;*/
+	
+}
+/*设置联系栏标题样式*/
+.contact h2{
+	color: #444444;
+	font: 18px Georgia;
+	border-bottom: dashed 1px #d3d3d3;
+}
+/*设置表单文字框样式*/
+.contact .txt{
+	width: 276px;
+	height: 33px;
+	text-align: 33px;
+	padding: 0;
+	background: url(../img/txt.png) no-repeat;
+	/*去掉默认边框*/
+	border: none;
+	padding: 0 10px;
+
+}
+/*设置表单文本框样式*/
+.contact .tarea{
+	width: 276px;
+	height: 114px;
+	background: url(../img/tarea.png) no-repeat;
+	/*去掉默认边框*/
+	border: none;
+	/*去掉可修改大小*/
+	resize: none;
+	/*去掉文本框滚动条*/
+	overflow: auto;
+	padding: 10px;
+	margin-top:17px ;
+}
+/*设置按钮样式*/
+.contact button{
+	width: 163px;
+	height: 32px;
+	background: url(../img/button-bg2.png);
+	/*去掉默认边框*/
+	border: none;
+	color: #fff;
+	font: 13px Georgia;
+	text-align: left;
+	text-indent: 1em;
+	padding: 0;
+	margin-top:12px;
+
+}
+.contact .nu button{
+	_margin-left:-1em ;	
+}
+
+.contact .sc p{
+	color: #444;
+	font: 12px helvetica;
+	margin-top: 11px;
+}
+.contact .sc .icons img{
+	width: 56px;
+	height: 56px;
+}
+.contact .sc .icons {
+	margin: 5px 0 30px;
+}
+.contact .sc h3{
+	color: #444;
+	font: bold 18px "gill sans mt";
+	padding-bottom: 10px;
+	border-bottom: dashed 1px #d3d3d3;
+}
+.contact .smallM{
+	margin-top: 10px ;
+}
+.contact .largeM{
+	margin-top: 17px ;
+}
+
+.contact .imgtxt img{
+	float: left;
+	margin-right: 9px;
+}
+.contact .imgtxt p{
+	color: #444;
+	font: 13px helvetica;
+	padding: 14px 0 7px;
+	border-bottom: dashed 1px #d3d3d3;
+}
+/*设置footer背景*/
+.footer{
+	border-top: 10px solid #4c4c4c;
+	background-color: #333;
+	height: 172px;
+}
+/*设置footer中链接样式*/
+.footer a{
+	text-decoration: none;
+	color: #999;
+	font: 11px helvetica;
+}
+.footer p{
+	color: #999;
+	font: 11px helvetica;
+}
+.footer .smallM{
+	margin-top: 12px;
+}
+.footer .largeM{
+	margin-top: 17px;
+}
+.footer .fu{
+	float: right;
+}
