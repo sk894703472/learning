@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>快速排序</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+		console.log(arr)
+		// function quickSort(array,left,right){
+
+		// 	if(left<right){
+		// 		var x = array[right],i = left-1,temp;
+		// 		for(var j = left;j<=right;j++){
+		// 			if(array[j]<=x){
+		// 				i++;
+		// 				temp = array[i];
+		// 				array[i] = array[j];
+		// 				array[j] = temp;
+		// 			}
+		// 		}
+		// 		console.log(arr)
+		// 		quickSort(array,left,i-1);
+		// 		quickSort(array,i+1,right);
+		// 	}
+		// 	return array;
+		// }
+		// console.log(quickSort(arr,0,arr.length-1));
+
+		function quickSort2(array){
+			if(array.length<=1){
+				return array;
+			}
+			var pivotIndex = Math.floor(array.length/2);
+			var pivot = array.splice(pivotIndex,1)[0];
+			var left = [];
+			var right = [];
+			for(var i=0;i<array.length;i++){
+				if(array[i]<pivot){
+					left.push(array[i]);
+				}else{
+					right.push(array[i])
+				}
+			}
+			console.log(left,right)
+			return quickSort2(left).concat([pivot],quickSort2(right));
+		}
+		console.log(quickSort2(arr))
+	</script>
+</body>
+</html>
