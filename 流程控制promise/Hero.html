@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hero</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var Hero = function (name) {
+			console.log(this.constructor.name)
+			// if(this.constructor.name !== 'Hero') {
+			// 	console.log(this.constructor.name)
+			// 	return new Hero(name);
+			// }
+			this.name = name;
+			(function(){
+				console.log(`Hi this is ${name}`)
+			})()
+			return Promise.resolve(this)
+		}
+		Promise.prototype.kill = function(num) {
+			return this.then(()=>{
+				if(num & 1!=0){
+					console.log(`kill ${num} 单数`);
+					return this;
+				}
+				console.log(`kill ${num} 复数`);
+				return this;
+			})
+		};
+		Promise.prototype.recover = function(num) {
+			return this.then(()=>{
+				console.log(`Recover ${num} bloods`)
+				return this;
+			})
+		};
+		Promise.prototype.sleep = function(num) {
+			return this.then(()=>new Promise(
+				resolve=>{
+					var timer = setTimeout(()=>{
+						clearTimeout(timer);
+						console.log(`sleep ${num}秒`);
+						resolve(this);
+					},num*1000)
+				}))
+		}
+		console.log(Promise.constructor.name)
+	</script>
+</body>
+</html>
