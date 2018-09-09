@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ss</title>
+</head>
+<body>
+<script type="text/javascript">
+	// function test(newstr){
+	//     let len = newstr.length;
+	//     if(len%2==0){
+	//         for(var m = 0;m<len;m++){
+	//             if(newstr[m]==newstr[len-1-m]){
+	//                 continue
+	//             }else{
+	//                 return false;
+	//             }
+	//         }
+	//         return true;
+	//     }else{
+	//         for(var m = 0;m<len;m++){
+	//             if(newstr[m]==newstr[len-1-m]||Math.ceil(m==len/2)){
+	//                 continue
+	//             }else{
+	//                 return false;
+	//             }
+	//         }
+	//         return true;
+
+	//     }
+	// }
+	// console.log(test("sd3s"))
+	function getPalindrome(s){
+		var ch = s.split("");
+		var str = " ";
+		var re = "";
+		for(var i = 0;i<ch.length;i++){
+			re = getEvery(ch,i,i);
+			if(re.length>str.length){
+				str = re;
+			}
+			re = getEvery(ch,i,i+1);
+			if(re.length>str.length){
+				str = re;
+			}
+		}
+		return str;
+	}
+	function getEvery(ch,i,j){
+		var length = ch.length;
+		while(i>=0&&j<=length-1&&ch[i]==ch[j]){
+			i--;
+			j++;
+		}
+		var res = ch.join("").substring(i+1,j);
+		console.log(res)
+		return res;
+	}
+	console.log(getPalindrome("asfdfweewf"))
+</script>
+</body>
+</html>
+
+
