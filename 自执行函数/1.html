@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1</title>
+</head>
+<body>
+<script type="text/javascript">
+	//总结：
+	//a.自执行函数会创建一个新的作用域，但是可以访问外部的参数
+	//b.自执行函数的this指向window，因为自执行函数是通过window调用的
+	//	window.(function(){...})()
+	//
+	//1.
+	// var obj = {
+	// 	x:1,
+	// 	xyz:function(){
+	// 		with(this){
+	// 			function con(){
+	// 				console.log(x);
+	// 				console.log(this.x);
+	// 			}
+	// 			var x =2;
+	// 			(function(){
+	// 				con();
+	// 			})();
+	// 			con.call(this);
+	// 		}
+	// 	}
+	// }
+	// obj.xyz(); 	//2 undefined 2 2
+	//
+	//2.
+	// var a = 1;
+	// (function a(){
+	// 	a = 2;
+	// 	console.log(a);
+	// 	delete a;
+	// 	console.log(a)
+	// })() //函数a 函数a
+	//
+	//3.不是关于自执行函数
+	var name = 'tom';
+	var person = {
+		name:'jerry',
+		getName:function(){
+			return this.name
+		}
+	};
+	var getName = person.getName;
+	var name1 = person.getName();
+	var name2 = getName();
+	console.log(name1,name2) //jerry tom
+	//4.
+	// var a =1;let b =2;
+	// console.log(window.a,window.b)	//1 undefined
+	//
+	/*var a =3;
+	function sk(){
+		a =2;
+		(function (){
+			var a = 1;
+			console.log(this.a)
+		})()
+	}
+	sk()*/
+</script>
+</body>
+</html>
